@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Новости{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>Новости</h1>
+    <h2>Tesla позволит электромобилям других <br>марок использовать свои зарядные станции</h2>
+    <p>Tesla теперь начала предоставлять владельцам электромобилей, не принадлежащих Tesla, доступ к некоторым станциям
+        Supercharger, а также объяснила, как эти станции работают. Об этом сообщает издание Electrek.</p>
+    {% for i in mylist %}
+    <p>{{i}}</p>
+    {% endfor %}
+    <button class="btn btn-warning">Кнопка</button>
+</div>
+{% endblock %}
