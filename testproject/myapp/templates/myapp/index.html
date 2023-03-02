@@ -1,16 +1,13 @@
 {% extends 'myapp/base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}Главная страница{% endblock %}
 
 
 {% block content %}
 <div class="features">
-    <h1>{{ title }}</h1>
+    <h1>Главная страница</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, ipsam nesciunt a, eum esse asperiores doloribus
         error labore nostrum voluptatem iusto quas nisi explicabo fuga odio earum beatae at ex.</p>
-        {% for i in mylist %}
-        <p>{{i}}</p>
-        {% endfor %}
     <button class="btn btn-warning">Кнопка</button>
 </div>
 {% endblock %}
