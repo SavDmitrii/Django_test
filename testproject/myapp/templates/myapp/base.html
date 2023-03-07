@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,23 +12,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body>
     <aside>
-        <img src="{% static 'myapp/images/logo.svg' %}" alt="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'myapp/images/logo.svg' %}" alt="logo">
+        </a>
         <span class="logo">MyProject</span>
         <h3>Navigation</h3>
         <ul>
-            <a href="{% url 'home' %}"><li><i class="bi bi-house"></i> Главная</li></a>
-            <a href="{% url 'about' %}"><li><i class="bi bi-info-circle"></i> О нас</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="bi bi-newspaper"></i></i> Новости</li></a>
-            <a href="#"><li><i class="bi bi-telephone"></i> Контакты</li></a>
+            <a href="{% url 'home' %}">
+                <li><i class="bi bi-house"></i> Главная</li>
+            </a>
+            <a href="{% url 'about' %}">
+                <li><i class="bi bi-info-circle"></i> О нас</li>
+            </a>
+            <a href="{% url 'news_home' %}">
+                <li><i class="bi bi-newspaper"></i></i> Новости</li>
+            </a>
+            <a href="#">
+                <li><i class="bi bi-telephone"></i> Контакты</li>
+            </a>
+            <a href="{% url 'create' %}">
+                <li><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Добавить запись</li>
+            </a>
         </ul>
     </aside>
 
     <main>
         {% block content %}
 
-    {% endblock %}
+        {% endblock %}
     </main>
 </body>
+
 </html>
